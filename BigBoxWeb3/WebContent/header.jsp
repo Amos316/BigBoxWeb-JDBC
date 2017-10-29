@@ -20,15 +20,15 @@
       <a class="navbar-brand" href="../BigBoxWeb/Welcome.jsp">BigBox App</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="../BigBoxWeb/listAllStoresServlet" action = "WelcomeServlet" value = "submit">ALL STORES</a></li>
-      <li><a href="../BigBoxWeb/StoresByDivisionServlet ">STORES BY DIVISION</a></li>
-	  <li ><a href="../BigBoxWeb/AddStores.jsp">ADD STORE</a></li>
-	  <li ><a href="../BigBoxWeb/UpdateStores.jsp">UPDATE STORE</a></li>
-	  <li ><a href="../BigBoxWeb/deleteStoreServlet">DELETE STORE</a></li>
-	  <li ><a href="../BigBoxWeb/AllDivisionsServlet">ALL DIVISIONS</a></li>
-	  <li ><a href="../BigBoxWeb/AddDivisions.jsp">ADD DIVISION</a></li>
-	  <li ><a href="../BigBoxWeb/DeleteDivisionServlet">DELETE DIVISION</a></li>
-	  <li ><a href="../BigBoxWeb/SalesServlet">SALES</a></li>
+      <li><a href="../BigBoxWeb3/listAllStoresServlet">ALL STORES</a></li>
+      <li><a href="../BigBoxWeb3/StoresByDivisionServlet ">STORES BY DIVISION</a></li>
+	  <li ><a href="../BigBoxWeb3/AddstoresServlet">ADD STORE</a></li>
+	  <li ><a href="../BigBoxWeb3/UpdateStoresServlet">UPDATE STORE</a></li>
+	  <li ><a href="../BigBoxWeb3/deleteStoreServlet">DELETE STORE</a></li>
+	  <li ><a href="../BigBoxWeb3/AllDivisionsServlet">ALL DIVISIONS</a></li>
+	  <li ><a href="../BigBoxWeb3/AddDivisions.jsp">ADD DIVISION</a></li>
+	  <li ><a href="../BigBoxWeb3/DeleteDivisions.jsp">DELETE DIVISION</a></li>
+	  <li ><a href="../BigBoxWeb3/SalesServlet">SALES</a></li>
 	  </ul>
 	  <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> ${sessionScope.user.userName}</a></li>
