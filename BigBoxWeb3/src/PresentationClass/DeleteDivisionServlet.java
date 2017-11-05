@@ -26,7 +26,7 @@ public class DeleteDivisionServlet extends HttpServlet {
 		Division d = new Division();
 		d.setDivNum(num);
 		dao.deleteDivision(d);
-		url = "/DeleteDivisions.jsp";
+		url = "/AllDivisionsServlet";
 		
 		
 		getServletContext()

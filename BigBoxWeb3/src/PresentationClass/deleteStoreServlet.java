@@ -25,7 +25,7 @@ public class deleteStoreServlet extends HttpServlet {
 		Store s = new Store();
 		s.setStoreNum(storeNum);
 		dao.deleteStore(s);
-		url = "/DeleteStores.jsp";
+		url = "/listAllStoresServlet";
 		
 		getServletContext()
 		.getRequestDispatcher(url)

@@ -17,14 +17,14 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="../BigBoxWeb/Welcome.jsp">BigBox App</a>
+      <a class="navbar-brand" href="../BigBoxWeb3/Welcome.jsp">BigBox App</a>
     </div>
     <ul class="nav navbar-nav">
       <li><a href="../BigBoxWeb3/listAllStoresServlet">ALL STORES</a></li>
       <li><a href="../BigBoxWeb3/StoresByDivisionServlet ">STORES BY DIVISION</a></li>
-	  <li ><a href="../BigBoxWeb3/AddstoresServlet">ADD STORE</a></li>
-	  <li ><a href="../BigBoxWeb3/UpdateStoresServlet">UPDATE STORE</a></li>
-	  <li ><a href="../BigBoxWeb3/deleteStoreServlet">DELETE STORE</a></li>
+	  <li ><a href="../BigBoxWeb3/AddStores.jsp">ADD STORE</a></li>
+	  <li ><a href="../BigBoxWeb3/UpdateStores.jsp">UPDATE STORE</a></li>
+	  <li ><a href="../BigBoxWeb3/DeleteStores.jsp">DELETE STORE</a></li>
 	  <li ><a href="../BigBoxWeb3/AllDivisionsServlet">ALL DIVISIONS</a></li>
 	  <li ><a href="../BigBoxWeb3/AddDivisions.jsp">ADD DIVISION</a></li>
 	  <li ><a href="../BigBoxWeb3/DeleteDivisions.jsp">DELETE DIVISION</a></li>
@@ -32,7 +32,7 @@
 	  </ul>
 	  <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> ${sessionScope.user.userName}</a></li>
-       <li><a href="../BigBoxWeb/index.jsp"><span class="glyphicon glyphicon-log-out" name = "exit" value = "logOut"></span> Exit</a></li>
+       <li><a href="../BigBoxWeb3/index.jsp"><span class="glyphicon glyphicon-log-out" name = "exit" value = "logOut"></span> Exit</a></li>
     </ul>
   </div>
 </nav> 

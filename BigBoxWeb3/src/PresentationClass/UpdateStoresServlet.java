@@ -37,9 +37,9 @@ public class UpdateStoresServlet extends HttpServlet {
 		String state = request.getParameter("state");
 		String zip = request.getParameter("zip");
 		BigBoxDAO dao = BigBoxFactory.getBigBoxDAO();
-		s = new Store(diviD, strNbr, sales,name,address,city,state,zip);
+		s = new Store(diviD, strNbr, sales,name,address,city,state, zip);
 		dao.updateStore(s);
-		url = "/listAllStores.jsp";
+		url = "/listAllStoresServlet";
 		getServletContext().getRequestDispatcher(url).forward(request, response);
 	}
 

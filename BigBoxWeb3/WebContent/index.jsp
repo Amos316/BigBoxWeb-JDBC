@@ -20,16 +20,16 @@
 		<div class ="form-group">
 		
 		<label class="sr-only" for="username"></label>
-		<br/>UserName:<input type="text" class="control-label" name="userName"  value ="${user.userName}" required>
+		<br/>UserName:<input type="text" class="control-label" name="userName"   required>
 		</div>
 		<div class ="form-group">
 		<label class="sr-only" for="password"></label>
-		<br/>Password:<input type="password" class="control-label " name="password" value="${user.password}"   required>
+		<br/>Password:<input type="password" class="control-label " name="password"    required>
 		</div>
 		<br/><label>&nbsp;</label>
 		<br/><input type="submit" value="submit">
-		
-		
+		<%-- value="${user.password}"
+		value ="${user.userName}" --%>
 		</form>
 	
 	</center>

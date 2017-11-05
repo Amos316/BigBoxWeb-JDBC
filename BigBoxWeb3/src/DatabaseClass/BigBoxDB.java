@@ -417,7 +417,7 @@ public class BigBoxDB implements BigBoxDAO {
 
 			response = ps.execute();
 
-			System.out.println("Delete excuted succesfully.");
+		//	System.out.println("Delete excuted succesfully.");
 
 		} catch (SQLException e) {
 
@@ -466,7 +466,7 @@ public class BigBoxDB implements BigBoxDAO {
 
 			ps.executeUpdate();
 
-			System.out.println("Division Added Successfully");
+		//	System.out.println("Division Added Successfully");
 
 		} catch (SQLException e) {
 
@@ -499,7 +499,7 @@ public class BigBoxDB implements BigBoxDAO {
 
 			ps.executeUpdate();
 
-			System.out.println("Division deleted successfully");
+		//	System.out.println("Division deleted successfully");
 
 		} catch (SQLException e) {
 
@@ -545,7 +545,7 @@ public class BigBoxDB implements BigBoxDAO {
 
 			ps.executeUpdate();
 
-			System.out.println("Store Update Succesfull");
+			//System.out.println("Store Updated Succesfully");
 
 		} catch (SQLException e) {
 

@@ -35,20 +35,20 @@ public class AddstoresServlet extends HttpServlet {
 		String state = request.getParameter("state");
 		String zip = request.getParameter("zip");
 		BigBoxDAO dao = BigBoxFactory.getBigBoxDAO();
-		Store store = new Store();
+		Store s = new Store();
 		Division d = new Division();
 		d.setDivNum(divisionID);
-		store.setDivision(d);
-		store.setStoreNum(StoreNumber);
-		store.setSales(sales);
-		store.setName(name);
-		store.setAddress(address);
-		store.setCity(city);
-		store.setState(state);
-		store.setZip(zip);
-		dao.addStore(store);
-		request.setAttribute("store", store);
-		url = "/listAllStores.jsp";
+		s.setDivision(d);
+		s.setStoreNum(StoreNumber);
+		s.setSales(sales);
+		s.setName(name);
+		s.setAddress(address);
+		s.setCity(city);
+		s.setState(state);
+		s.setZip(zip);
+		dao.addStore(s);
+		request.setAttribute("store", s);
+		url = "/listAllStoresServlet";
 
 		getServletContext().getRequestDispatcher(url).forward(request, response);
 	}
