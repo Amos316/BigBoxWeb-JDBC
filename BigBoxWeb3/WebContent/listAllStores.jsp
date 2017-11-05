@@ -19,8 +19,8 @@
 	<h4>${sessionScope.user.firstName}${sessionScope.user.lastName},
 		these are the list of all stores.</h4>
 
-	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-	
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 	<table class="table">
 		<tr>
 			<th>ID</th>
@@ -35,22 +35,18 @@
 
 
 		</tr>
-		<c:forEach var="s" items="${stores}" >
-		<tr>
-			
-
-
-			<td><c:out value="${s.id}" /></td>
-			<td><c:out value="${s.divID}" /></td>
-			<td><c:out value="${s.sales}" />
-			<td><c:out value="${s.storeNum}" /></td>
-			<td><c:out value="${s.name}" /></td>
-			<td><c:out value="${s.address}" /></td>
-			<td><c:out value="${s.city}" /></td>
-			<td><c:out value="${s.state}" /></td>
-			<td><c:out value="${s.zip}" /></td>
-
-		</tr>
+		<c:forEach var="s" items="${stores}">
+			<tr>
+				<td><c:out value="${s.id}" /></td>
+				<td><c:out value="${s.divID}" /></td>
+				<td><c:out value="${s.sales}" />
+				<td><c:out value="${s.storeNum}" /></td>
+				<td><c:out value="${s.name}" /></td>
+				<td><c:out value="${s.address}" /></td>
+				<td><c:out value="${s.city}" /></td>
+				<td><c:out value="${s.state}" /></td>
+				<td><c:out value="${s.zip}" /></td>
+			</tr>
 		</c:forEach>
 	</table>
 

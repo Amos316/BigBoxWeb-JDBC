@@ -13,10 +13,6 @@ import DatabaseClass.BigBoxFactory;
 
 @WebServlet("/AddstoresServlet")
 public class AddstoresServlet extends HttpServlet {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Override
@@ -25,7 +21,6 @@ public class AddstoresServlet extends HttpServlet {
 
 		String url = "/AddStores.jsp";
 
-		
 		String divisionID = (request.getParameter("divisionID"));
 		String StoreNumber = request.getParameter("StoreNumber");
 		double sales = Double.parseDouble(request.getParameter("sales"));

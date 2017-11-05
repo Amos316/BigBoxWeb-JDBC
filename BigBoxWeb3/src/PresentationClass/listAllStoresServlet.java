@@ -21,7 +21,8 @@ import DatabaseClass.UserDB;
 /**
  * Servlet implementation class listAllStores
  */
-@WebServlet(urlPatterns = {"/listAllStoresServlet"}, initParams= {@WebInitParam(name ="relativePathToFile", value = "/WEB-INF/listAllStores.jsp")})
+@WebServlet(urlPatterns = { "/listAllStoresServlet" }, initParams = {
+		@WebInitParam(name = "relativePathToFile", value = "/WEB-INF/listAllStores.jsp") })
 public class listAllStoresServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -34,7 +35,6 @@ public class listAllStoresServlet extends HttpServlet {
 		BigBoxDAO dao = BigBoxFactory.getBigBoxDAO();
 		ArrayList<Store> stores = dao.listAllStores();
 		request.setAttribute("stores", stores);
-		
 
 		getServletContext().getRequestDispatcher(url).forward(request, response);
 	}

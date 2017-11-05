@@ -20,24 +20,20 @@ import DatabaseClass.BigBoxFactory;
 public class StoresByDivisionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		String url = "/StoresByDivision.jsp";
 		String divNum = request.getParameter("Division");
 		BigBoxDAO dao = BigBoxFactory.getBigBoxDAO();
-		ArrayList <Store> store = dao.listAllStores(divNum);
+		ArrayList<Store> store = dao.listAllStores(divNum);
 		request.setAttribute("store", store);
-		
-		
-	
-	getServletContext()
-	.getRequestDispatcher(url)
-	.forward(request, response);
-}
+		getServletContext().getRequestDispatcher(url).forward(request, response);
+	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
-	}
+}

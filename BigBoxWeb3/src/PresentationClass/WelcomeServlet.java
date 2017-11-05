@@ -20,7 +20,7 @@ import DatabaseClass.BigBoxDB;
 import DatabaseClass.BigBoxFactory;
 import DatabaseClass.UserDB;
 
-@WebServlet(urlPatterns= {"/WelcomeServlet"})
+@WebServlet(urlPatterns = { "/WelcomeServlet" })
 public class WelcomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -29,7 +29,7 @@ public class WelcomeServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		String url = "/Welcome.jsp";
-		
+
 		// get current action
 		String action = request.getParameter("action");
 		String list = request.getParameter("list");
@@ -38,30 +38,26 @@ public class WelcomeServlet extends HttpServlet {
 		BigBoxDAO dao = BigBoxFactory.getBigBoxDAO();
 		NumberFormat c = NumberFormat.getCurrencyInstance();
 
-		 HttpSession session = request.getSession();
-		 url = "/AddStores.jsp";
-		 
+		HttpSession session = request.getSession();
+		url = "/AddStores.jsp";
+
 		if (action != null && action.equalsIgnoreCase("submit")) {
-			
-			
-			
-			
-			
+
 			{
-				
+
 				url = "/Allstores.jsp";
 			}
 		} else if (action != null && action.equalsIgnoreCase("send")) {
-			
+
 			url = "/AllDivisions";
-			
-			} else if (action != null && action.equals(sales)) {
+
+		} else if (action != null && action.equals(sales)) {
 			url = "/Sales.jsp";
 			String formattedSales = c.format(dao.getSalesSummary());
 			request.setAttribute("sales", formattedSales);
 		} else {
-			 url = "/AllDivisions.jsp" ;
-			int dID =Integer.parseInt(request.getParameter("dID"));
+			url = "/AllDivisions.jsp";
+			int dID = Integer.parseInt(request.getParameter("dID"));
 			String dNum = request.getParameter("dNum");
 			String dname = request.getParameter("dname");
 			String daddress = request.getParameter("daddress");
@@ -69,7 +65,7 @@ public class WelcomeServlet extends HttpServlet {
 			String dstate = request.getParameter("dstate");
 			String dzip = request.getParameter("dzip");
 			Division division = new Division();
-			
+
 			division.setId(dID);
 			division.setDivNum(dNum);
 			division.setName(dname);
@@ -79,22 +75,15 @@ public class WelcomeServlet extends HttpServlet {
 			division.setZip(dzip);
 			dao.addDivision(division);
 			request.setAttribute("Division", division);
-			
-			
-			
-		}
-		
-		getServletContext()
-		.getRequestDispatcher(url)
-		.forward(request, response);
-	}
 
-	
-	
+		}
+
+		getServletContext().getRequestDispatcher(url).forward(request, response);
+	}
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-	doPost(request, response);
+		doPost(request, response);
 	}
 }

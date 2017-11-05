@@ -72,7 +72,7 @@ public class BigBoxApp {
 				double sales = sc.nextDouble();
 				Store store = new Store(divisionID, StoreNumber, sales, name, address, city, state, zip);
 				dao.addStore(store);
-			
+
 			} else if (userinput.equalsIgnoreCase("Update")) {
 				System.out.println("Enter Store Number for the store to be updated: ");
 				String StoreNumber = sc.nextLine();
@@ -94,8 +94,8 @@ public class BigBoxApp {
 				double sales = sc.nextDouble();
 				s = new Store(divisionID, StoreNumber, sales, name, address, city, state, zip);
 				dao.updateStore(s);
-				
-			}else if (userinput.equalsIgnoreCase("new Div")) {
+
+			} else if (userinput.equalsIgnoreCase("new Div")) {
 				System.out.println("Enter division number:");
 				String divNum = sc.nextLine();
 				System.out.println("Enter division name:");
@@ -152,14 +152,16 @@ public class BigBoxApp {
 				continue;
 			} else if (userinput.equalsIgnoreCase("exit")) {
 				break;
-				
-			}System.out.println();
+
+			}
+			System.out.println();
 			System.out.print("Type EXIT to end or any key to continue: ");
 			choice = sc.next();
 			sc.nextLine();
 			System.out.println();
-			
-		}System.out.println("Thanks for using the Big Box app, Goodbye!");
+
+		}
+		System.out.println("Thanks for using the Big Box app, Goodbye!");
 		sc.close();
 		System.exit(0);
 	}

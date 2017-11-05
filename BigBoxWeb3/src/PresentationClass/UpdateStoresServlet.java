@@ -17,13 +17,10 @@ import DatabaseClass.BigBoxFactory;
 @WebServlet("/UpdateStoresServlet")
 public class UpdateStoresServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
- 
-  
 
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		String url = "/UpdateStores.jsp";
 		String strNbr = request.getParameter("StoreNumber");
 		Store s = new Store();
@@ -37,16 +34,18 @@ public class UpdateStoresServlet extends HttpServlet {
 		String state = request.getParameter("state");
 		String zip = request.getParameter("zip");
 		BigBoxDAO dao = BigBoxFactory.getBigBoxDAO();
-		s = new Store(diviD, strNbr, sales,name,address,city,state, zip);
+		s = new Store(diviD, strNbr, sales, name, address, city, state, zip);
 		dao.updateStore(s);
 		url = "/listAllStoresServlet";
 		getServletContext().getRequestDispatcher(url).forward(request, response);
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doPost(request, response);
 	}

@@ -10,7 +10,7 @@ import DatabaseClass.UserDB;
 
 @WebServlet("/UsersServlet")
 public class UsersServlet extends HttpServlet {
-private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -18,34 +18,32 @@ private static final long serialVersionUID = 1L;
 
 		HttpSession session = request.getSession();
 		String url = "/index.jsp";
-		String message= "";
+		String message = "";
 		// get current action
 		String action = request.getParameter("action");
 		String userName = request.getParameter("userName");
 		String password = request.getParameter("password");
-		if (action!=null && action.equalsIgnoreCase("login")) {
+		if (action != null && action.equalsIgnoreCase("login")) {
 			url = "/index.jsp";
-			User user = UserDB.selectUser(userName); 
-		  if (user !=null) {
-			  url = "/Welcome.jsp";
-			  
-		  }else {
-			
-			
-			if (userName == null || password == null || userName.isEmpty() || password.isEmpty() || user==null)  {
-				message ="Please try again";
-				url = "/index.jsp";
+			User user = UserDB.selectUser(userName);
+			if (user != null) {
+				url = "/Welcome.jsp";
 
-			
+			} else {
+
+				if (userName == null || password == null || userName.isEmpty() || password.isEmpty() || user == null) {
+					message = "Please try again";
+					url = "/index.jsp";
+
 				}
-					
+
 			}
-		   
+
 			request.setAttribute("user", user);
 			session.setAttribute("user", user);
 			request.setAttribute("message", message);
 			Cookie c = new Cookie("userCookie", userName);
-			c.setMaxAge(60*60*248365*1);
+			c.setMaxAge(60 * 60 * 248365 * 1);
 			c.setPath("/");
 			response.addCookie(c);
 		}
